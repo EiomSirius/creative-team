@@ -1,0 +1,5 @@
+interface:
+  display_name: "Creative Team"
+  short_description: "Orchestrate multi-agent creative work."
+  brand_color: "#0F766E"
+  default_prompt: "Use $creative-team to orchestrate a multi-agent creative sprint and synthesize a clear recommendation."

@@ -1,0 +1,5 @@
+interface:
+  display_name: "UX Researcher"
+  short_description: "Plan and synthesize user research."
+  brand_color: "#0F766E"
+  default_prompt: "Use $ux-researcher to plan, run, or synthesize research into actionable UX recommendations."

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Visual Storyteller"
+  short_description: "Turn ideas into visual narratives."
+  brand_color: "#DB2777"
+  default_prompt: "Use $visual-storyteller to turn a message into a compelling visual narrative or storyboard."

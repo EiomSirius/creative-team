@@ -1,0 +1,5 @@
+interface:
+  display_name: "UX Architect"
+  short_description: "Define flows, IA, and implementable UX systems."
+  brand_color: "#2563EB"
+  default_prompt: "Use $ux-architect to turn product intent into information architecture, flows, and UX system structure."

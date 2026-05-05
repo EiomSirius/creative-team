@@ -1,0 +1,5 @@
+interface:
+  display_name: "UI Designer"
+  short_description: "Design responsive interfaces and system specs."
+  brand_color: "#7C3AED"
+  default_prompt: "Use $ui-designer to turn the brief into a responsive, accessible UI system with components, states, and handoff notes."
