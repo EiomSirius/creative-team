@@ -1,5 +1,0 @@
-interface:
-  display_name: "Image Prompt Engineer"
-  short_description: "Write precise AI image prompts with control."
-  brand_color: "#D97706"
-  default_prompt: "Use $image-prompt-engineer to turn a visual concept into a high-precision AI image prompt."

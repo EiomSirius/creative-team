@@ -1,5 +1,0 @@
-interface:
-  display_name: "Brand Guardian"
-  short_description: "Protect brand identity and consistency."
-  brand_color: "#B45309"
-  default_prompt: "Use $brand-guardian to define or audit brand identity, voice, and consistency across touchpoints."

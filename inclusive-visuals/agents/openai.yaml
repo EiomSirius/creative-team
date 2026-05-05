@@ -1,5 +1,0 @@
-interface:
-  display_name: "Inclusive Visuals Specialist"
-  short_description: "Create accurate, bias-aware visual prompts."
-  brand_color: "#059669"
-  default_prompt: "Use $inclusive-visuals to write or audit inclusive prompts for images and video."

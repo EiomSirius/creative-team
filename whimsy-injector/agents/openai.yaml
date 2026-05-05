@@ -1,5 +1,0 @@
-interface:
-  display_name: "Whimsy Injector"
-  short_description: "Add purposeful delight without harming usability."
-  brand_color: "#EC4899"
-  default_prompt: "Use $whimsy-injector to add tasteful delight, microcopy, and playful interaction ideas without hurting usability."
