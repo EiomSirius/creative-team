@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640">
+  <defs>
+    <!-- Background gradient -->
+    <radialGradient id="bgGrad" cx="35%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#1a1530"/>
+      <stop offset="50%" stop-color="#0f0d1a"/>
+      <stop offset="100%" stop-color="#080712"/>
+    </radialGradient>
+
+    <!-- Central glow -->
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="40%" stop-color="#c090ff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#c090ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="centerDot" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#e8d0ff"/>
+      <stop offset="70%" stop-color="#b070f0"/>
+      <stop offset="100%" stop-color="#6030a0" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Node gradients for each specialist -->
+    <radialGradient id="node0" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffb860"/>
+      <stop offset="100%" stop-color="#d08020"/>
+    </radialGradient>
+    <radialGradient id="node1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#40e0c0"/>
+      <stop offset="100%" stop-color="#108070"/>
+    </radialGradient>
+    <radialGradient id="node2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7090ff"/>
+      <stop offset="100%" stop-color="#3040b0"/>
+    </radialGradient>
+    <radialGradient id="node3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f070c0"/>
+      <stop offset="100%" stop-color="#b03080"/>
+    </radialGradient>
+    <radialGradient id="node4" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#30d0ff"/>
+      <stop offset="100%" stop-color="#1080b0"/>
+    </radialGradient>
+    <radialGradient id="node5" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#40f080"/>
+      <stop offset="100%" stop-color="#10a040"/>
+    </radialGradient>
+    <radialGradient id="node6" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd040"/>
+      <stop offset="100%" stop-color="#c09010"/>
+    </radialGradient>
+    <radialGradient id="node7" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c080ff"/>
+      <stop offset="100%" stop-color="#7030c0"/>
+    </radialGradient>
+
+    <!-- Glow filters -->
+    <filter id="glowSoft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glowStrong" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="nodeGlow" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Orbit gradient -->
+    <linearGradient id="orbitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c090ff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#40e0c0" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <!-- Text gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#e8d0ff"/>
+      <stop offset="100%" stop-color="#b090e0"/>
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#40e0c0"/>
+      <stop offset="50%" stop-color="#c090ff"/>
+      <stop offset="100%" stop-color="#ffb860"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="url(#bgGrad)"/>
+
+  <!-- Subtle dot grid -->
+  <g opacity="0.04">
+    <pattern id="dots" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="16" cy="16" r="0.8" fill="#ffffff"/>
+    </pattern>
+    <rect width="1280" height="640" fill="url(#dots)"/>
+  </g>
+
+  <!-- ===== ORBITAL SYSTEM (left side, center ~400, 320) ===== -->
+
+  <!-- Central large glow -->
+  <ellipse cx="400" cy="320" rx="280" ry="220" fill="url(#centerGlow)"/>
+
+  <!-- Orbit rings -->
+  <ellipse cx="400" cy="320" rx="190" ry="190" fill="none" stroke="url(#orbitGrad)" stroke-width="0.8" opacity="0.5"/>
+  <ellipse cx="400" cy="320" rx="230" ry="200" fill="none" stroke="#c090ff" stroke-width="0.3" opacity="0.2" transform="rotate(-20, 400, 320)"/>
+
+  <!-- Connection lines from center to nodes -->
+  <g opacity="0.15" stroke="#c090ff" stroke-width="0.6">
+    <line x1="400" y1="320" x2="400" y2="140"/>
+    <line x1="400" y1="320" x2="534" y2="179"/>
+    <line x1="400" y1="320" x2="590" y2="320"/>
+    <line x1="400" y1="320" x2="534" y2="461"/>
+    <line x1="400" y1="320" x2="400" y2="500"/>
+    <line x1="400" y1="320" x2="266" y2="461"/>
+    <line x1="400" y1="320" x2="210" y2="320"/>
+    <line x1="400" y1="320" x2="266" y2="179"/>
+  </g>
+
+  <!-- Outer connecting ring between nodes (constellation) -->
+  <g opacity="0.12" stroke="#40e0c0" stroke-width="0.5" fill="none">
+    <circle cx="400" cy="320" r="190"/>
+  </g>
+
+  <!-- Specialist nodes (8) -->
+  <g filter="url(#nodeGlow)">
+    <!-- Node 0: top — brand-guardian (amber) -->
+    <circle cx="400" cy="140" r="7" fill="url(#node0)"/>
+    <!-- Node 1: top-right — ux-researcher (teal) -->
+    <circle cx="534" cy="179" r="7" fill="url(#node1)"/>
+    <!-- Node 2: right — ux-architect (indigo) -->
+    <circle cx="590" cy="320" r="7" fill="url(#node2)"/>
+    <!-- Node 3: bottom-right — ui-designer (magenta) -->
+    <circle cx="534" cy="461" r="7" fill="url(#node3)"/>
+    <!-- Node 4: bottom — visual-storyteller (cyan) -->
+    <circle cx="400" cy="500" r="7" fill="url(#node4)"/>
+    <!-- Node 5: bottom-left — inclusive-visuals (emerald) -->
+    <circle cx="266" cy="461" r="7" fill="url(#node5)"/>
+    <!-- Node 6: left — image-prompt-engineer (gold) -->
+    <circle cx="210" cy="320" r="7" fill="url(#node6)"/>
+    <!-- Node 7: top-left — whimsy-injector (violet) -->
+    <circle cx="266" cy="179" r="7" fill="url(#node7)"/>
+  </g>
+
+  <!-- Central director node -->
+  <g filter="url(#glowStrong)">
+    <circle cx="400" cy="320" r="18" fill="url(#centerDot)" opacity="0.9"/>
+    <circle cx="400" cy="320" r="10" fill="#ffffff" opacity="0.95"/>
+    <circle cx="400" cy="320" r="4" fill="#ffffff"/>
+  </g>
+
+  <!-- Tiny particle dots scattered -->
+  <g opacity="0.25">
+    <circle cx="440" cy="200" r="1.2" fill="#c090ff"/>
+    <circle cx="350" cy="450" r="1" fill="#40e0c0"/>
+    <circle cx="500" cy="400" r="0.8" fill="#ffb860"/>
+    <circle cx="310" cy="250" r="1" fill="#f070c0"/>
+    <circle cx="470" cy="280" r="0.9" fill="#30d0ff"/>
+    <circle cx="330" cy="380" r="1.1" fill="#40f080"/>
+    <circle cx="450" cy="460" r="0.7" fill="#ffd040"/>
+    <circle cx="360" cy="180" r="0.9" fill="#c080ff"/>
+    <circle cx="520" cy="250" r="0.8" fill="#40e0c0"/>
+    <circle cx="290" cy="420" r="1" fill="#ffb860"/>
+  </g>
+
+  <!-- ===== TYPOGRAPHY (right side) ===== -->
+
+  <!-- Accent line -->
+  <rect x="740" y="240" width="60" height="2" rx="1" fill="url(#accentGrad)"/>
+
+  <!-- Main title -->
+  <text x="740" y="305" font-family="'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="52" font-weight="700" letter-spacing="-1" fill="url(#textGrad)">
+    Creative Team
+  </text>
+
+  <!-- Subtitle -->
+  <text x="740" y="350" font-family="'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="18" font-weight="400" fill="#a090c0" letter-spacing="0.3">
+    On-call creative team for websites,
+  </text>
+  <text x="740" y="376" font-family="'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="18" font-weight="400" fill="#a090c0" letter-spacing="0.3">
+    branding, and digital design
+  </text>
+
+  <!-- Feature pills -->
+  <g transform="translate(740, 410)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="105" height="28" rx="14" fill="#c090ff" opacity="0.12"/>
+    <text x="52" y="19" font-family="'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="11" font-weight="500" fill="#c090ff" text-anchor="middle">8 Specialists</text>
+
+    <!-- Pill 2 -->
+    <rect x="115" y="0" width="105" height="28" rx="14" fill="#40e0c0" opacity="0.12"/>
+    <text x="167" y="19" font-family="'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="11" font-weight="500" fill="#40e0c0" text-anchor="middle">Creative Sprint</text>
+
+    <!-- Pill 3 -->
+    <rect x="230" y="0" width="90" height="28" rx="14" fill="#ffb860" opacity="0.12"/>
+    <text x="275" y="19" font-family="'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="11" font-weight="500" fill="#ffb860" text-anchor="middle">Branding</text>
+
+    <!-- Pill 4 -->
+    <rect x="330" y="0" width="70" height="28" rx="14" fill="#f070c0" opacity="0.12"/>
+    <text x="365" y="19" font-family="'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="11" font-weight="500" fill="#f070c0" text-anchor="middle">UX/UI</text>
+  </g>
+
+  <!-- Footer badge -->
+  <g transform="translate(740, 470)">
+    <rect x="0" y="0" width="145" height="22" rx="6" fill="#ffffff" opacity="0.06"/>
+    <text x="72" y="15" font-family="'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="10" font-weight="500" fill="#8888aa" text-anchor="middle">Hermes Agent Skill</text>
+  </g>
+
+  <!-- Bottom-right subtle mark -->
+  <g transform="translate(1220, 590)" opacity="0.15">
+    <circle cx="0" cy="0" r="18" fill="none" stroke="#c090ff" stroke-width="0.5"/>
+    <circle cx="0" cy="0" r="6" fill="#c090ff" opacity="0.3"/>
+  </g>
+</svg>
